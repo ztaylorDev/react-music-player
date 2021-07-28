@@ -1,13 +1,64 @@
-import React from 'react';
+import React, { Component } from 'react';
+import axios from 'axios';
+import Song from './Components/Song';
 import './App.css';
+//import NavBar from './Navbar';
 
-function App() {
-    return (
-        <div>
-            <h1>hello world</h1>
-        </div>
-        
-    );
+
+class App extends Component{
+    constructor(props){
+        super(props)
+        this.state = {
+            songs: [{title: "", artist: "", genre: "", album: "", releaseDate: "",}]
+        }; 
+    }
+
+
+    componentDidMount(){
+        console.log("i mounted");
+        this.makeGetRequest();
+        console.log("i requested");
+    }
+
+
+
+    async makeGetRequest(){
+        try{
+            let response = await axios.get('http://www.devcodecampmusiclibrary.com/api/music/');
+            console.log(response.data)
+            this.setState({songs: response.data})
+        }
+        catch (err){
+            console.log('Error in API call!', err)
+        }
+    }
+
+
+
+
+
+    render(){
+        return(
+            <div>
+                <Song songs={this.state.songs} />
+                <button onClick ={this.makeGetRequest}>Previous track</button>
+                <button className="nextbutton">Next Track</button>
+            </div>
+        )
+    }    
+
+
+
+
+
+
 }
+
+
+
+
+
+
+
 
 export default App;

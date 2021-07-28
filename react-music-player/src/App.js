@@ -10,8 +10,38 @@ class App extends Component{
         super(props)
         this.state = {
             songs: [{title: "", artist: "", genre: "", album: "", releaseDate: "",}]
-        }; 
+            
+            
+        }
     }
+
+
+
+
+    goToNextSong(){
+        let tempSongNumber = this.state.props;
+        tempSongNumber++;
+        if(tempSongNumber === this.Song.length){
+            tempSongNumber = 0;
+        }
+        this.setState({
+            songNumber: tempSongNumber
+        })
+    
+    }
+    goToPreviousSong(){
+        let tempSongNumber = this.state.props;
+        tempSongNumber--;
+        if(tempSongNumber < 0){
+            tempSongNumber = this.Song.length;
+        }
+        this.setState({
+            songNumber: tempSongNumber
+        })
+    
+    }
+
+
 
 
     componentDidMount(){
@@ -37,10 +67,18 @@ class App extends Component{
 
 
 
+
+    
+
+
+
+
     render(){
         return(
             <div>
                 <Song songs={this.state.songs} />
+                {/* <Song songs={this.songs[this.state.songNumber]} nextSong={() => this.goToNextSong()}  */}
+                {/* previousSong={() => this.goToPreviousSong()}/>  */}
                 <button onClick ={this.makeGetRequest}>Previous track</button>
                 <button className="nextbutton">Next Track</button>
             </div>

@@ -3,6 +3,7 @@ import axios from "axios";
 import Song from "./Components/Song";
 import "./App.css";
 //import NavBar from './Navbar';
+import SearchBar from "./Components/SearchBar";
 
 class App extends Component {
   constructor(props) {
@@ -58,6 +59,7 @@ class App extends Component {
   render() {
     return (
       <div>
+        <SearchBar />
         <Song songs={this.state.songs} />
         {/* <Song songs={this.songs[this.state.songNumber]} nextSong={() => this.goToNextSong()}  */}
         {/* previousSong={() => this.goToPreviousSong()}/>  */}

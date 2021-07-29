@@ -59,7 +59,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <SearchBar />
+        {/* <SearchBar /> */}
         <Song songs={this.state.songs} />
         {/* <Song songs={this.songs[this.state.songNumber]} nextSong={() => this.goToNextSong()}  */}
         {/* previousSong={() => this.goToPreviousSong()}/>  */}

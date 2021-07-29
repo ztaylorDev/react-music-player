@@ -1,38 +1,46 @@
 import React from "react";
 
 const Song = (props) => {
+  //   return (
+
+  // <div>
+
+  // </div>
+   // );
+
   return (
-        
+    <div>
+      {props.songs.map((song, index) => (
+        // <p>
+        //   Hello, {song.title} from {song.album}!
+        // </p>
         <div>
-            <h1>{props.songs[0].title}</h1>
-            <p>{props.songs[0].artist}</p>
-            <p>{props.songs[0].album}</p>
-            <p>{props.songs[0].genre}</p>
-            <p>{props.songs[0].releaseDate}</p>
+              <span> {song.title} </span>
+              <span> {song.artist} </span>
+              <span> {song.album} </span>
+              <span> {song.genre} </span>
+              <span> {song.releaseDate} </span>
         </div>
-    );    
+      ))}
+    </div>
+  );
+ 
 };
 
-
-// function songButton(props){ 
+// function songButton(props){
 //     return(
-//         <div className="row row-spacer"> 
+//         <div className="row row-spacer">
 //             <div className="col-md-4">
-//                 <button onClick={() => props.previousSong()}>Pevious Song</button> 
+//                 <button onClick={() => props.previousSong()}>Pevious Song</button>
 //             </div>
 //             <div className="col-md-4">
 //                 <Song book={props.book}/>
 //             </div>
 //             <div className="col-md-4">
-//              <button onClick={() => props.nextSong()}>Next Song</button> 
+//              <button onClick={() => props.nextSong()}>Next Song</button>
 //             </div>
 //         </div>
 //     )
 // }
-
-
-
-
-
 
 export default Song;

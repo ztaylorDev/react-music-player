@@ -84,7 +84,7 @@ class App extends Component {
           <input value={userInput} onChange={this.handleChange} />
         </fieldset> */}
         {/* <SearchBar /> */}
-        <Song songs={this.state.songs} />
+        <Song songs={this.state.songs}> My Library </Song>
         {this.makeGetRequest}
       </div>
     );

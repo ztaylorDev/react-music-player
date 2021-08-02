@@ -3,6 +3,7 @@ import App from "../App";
 
 const navBar = (props) => {
   return (
+      <div className=".nav">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">
@@ -67,7 +68,7 @@ const navBar = (props) => {
                   type="search"
                   placeholder="Search"
                   aria-label="Search"
-                //   value={userInput} onChange={this.handleChange}
+                  value={props.artists}
                 ></input>
                 <button class="btn btn-outline-success" type="submit">
                   Search
@@ -76,6 +77,7 @@ const navBar = (props) => {
         </div>
       </div>
     </nav>
+    </div>
   );
 };
 

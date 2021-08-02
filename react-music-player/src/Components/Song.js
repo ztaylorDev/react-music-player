@@ -1,13 +1,6 @@
 import React from "react";
 
 const Song = (props) => {
-  //   return (
-
-  // <div>
-
-  // </div>
-   // );
-
   return (
     <div>
       {props.songs.map((song, index) => (
@@ -15,11 +8,21 @@ const Song = (props) => {
         //   Hello, {song.title} from {song.album}!
         // </p>
         <div>
-              <span> {song.title} </span>
-              <span> {song.artist} </span>
-              <span> {song.album} </span>
-              <span> {song.genre} </span>
-              <span> {song.releaseDate} </span>
+              <h2 style={{textAlign:'left'}}>Song:</h2>
+              <div src="" /> 
+              <h2 style={{color:'darkgreen'}}> {song.title} </h2>
+              <h2 style={{textAlign:'left'}}>Artist:</h2>
+              <h4 style={{color:'darkgreen'}}> {song.artist} </h4>
+              <h2 style={{textAlign:'left'}}>Album:</h2>
+              <span style={{color:'darkgreen'}}> {song.album} </span>
+              <h2 style={{textAlign:'left'}}>Genre:</h2>
+              <span style={{color:'darkgreen'}}> {song.genre} </span>
+              <h2 style={{textAlign:'left'}}>Release Date:</h2>
+              <span style={{color:'darkgreen'}}> {song.releaseDate} </span>
+              <br></br>
+              <br></br>
+              <br></br>
+              <br></br>
         </div>
       ))}
     </div>

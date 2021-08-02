@@ -1,20 +1,25 @@
 import React from 'react';
+import App from '../App';
 
-const FolkRockList = ({FolkRockList=[]}) => {
+
+class Artists extends App {
+  constructor(props) {
+    super(props);
+    this.state = {
+      userInput: "",
+      songs: [{ title: "", artist: "", genre: "", album: "", releaseDate: "" }],
+    };
+  }
+
+  Artists(props) {
+    this.setState({songs: [artist]})
   return (
-    <>
-    { FolkRockList.map((data,index) => {
-        if (data) {
-          return (
-            <div key={data.genre}>
-              <h1>{data.genre}</h1>
-	    </div>	
-    	   )	
-    	 }
-    	 return null
-    }) }
-    </>
-  );
+    <div> 
+    {props.artists}
+    {this.makeGetRequest}
+    </div>
+   );
+  }
 }
 
-export default FolkRockList
+export default Artists

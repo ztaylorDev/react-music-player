@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 import Song from "./Components/Song";
 import "./App.css";
-// import NavBar from './Navbar';
+import NavBar from './Components/NavBar';
 // import SearchBar from "./Components/SearchBar";
 
 class App extends Component {
@@ -78,10 +78,11 @@ class App extends Component {
     const userInput = this.state.userInput;
     return (
       <div>
-        <fieldset>
+        <NavBar />
+        {/* <fieldset>
           <legend>Search by Song:</legend>
           <input value={userInput} onChange={this.handleChange} />
-        </fieldset>
+        </fieldset> */}
         {/* <SearchBar /> */}
         <Song songs={this.state.songs} />
         {this.makeGetRequest}

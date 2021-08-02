@@ -1,4 +1,5 @@
 import React from "react";
+import logo from '../Components/rubber soul album pic.jpeg';
 
 const Song = (props) => {
   return (
@@ -8,17 +9,22 @@ const Song = (props) => {
         //   Hello, {song.title} from {song.album}!
         // </p>
         <div>
-              <h2 style={{textAlign:'left'}}>Song:</h2>
-              <div src="" /> 
-              <h2 style={{color:'darkgreen'}}> {song.title} </h2>
-              <h2 style={{textAlign:'left'}}>Artist:</h2>
-              <h4 style={{color:'darkgreen'}}> {song.artist} </h4>
-              <h2 style={{textAlign:'left'}}>Album:</h2>
-              <span style={{color:'darkgreen'}}> {song.album} </span>
-              <h2 style={{textAlign:'left'}}>Genre:</h2>
-              <span style={{color:'darkgreen'}}> {song.genre} </span>
-              <h2 style={{textAlign:'left'}}>Release Date:</h2>
-              <span style={{color:'darkgreen'}}> {song.releaseDate} </span>
+              <img src={logo} style={{paddingLeft:'20px'}} alt="Logo" />
+              <div style={{paddingBottom:'30px', paddingLeft:'20px'}} />
+              <h2 style={{textAlign:'left', paddingLeft:'20px'}}>Song:</h2>
+              <h4 style={{color:'darkgreen', paddingLeft:'20px'}}> {song.title} </h4>
+              <br></br>
+              <h2 style={{textAlign:'left', paddingLeft:'20px'}}>Artist:</h2>
+              <h4 style={{color:'darkgreen', paddingLeft:'20px'}}> {song.artist} </h4>
+              <br></br>
+              <h2 style={{textAlign:'left', paddingLeft:'20px'}}>Album:</h2>
+              <h4 style={{color:'darkgreen', paddingLeft:'20px'}}> {song.album} </h4>
+              <br></br>
+              <h2 style={{textAlign:'left', paddingLeft:'20px'}}>Genre:</h2>
+              <h4 style={{color:'darkgreen', paddingLeft:'20px'}}> {song.genre} </h4>
+              <br></br>
+              <h2 style={{textAlign:'left', paddingLeft:'20px'}}>Release Date:</h2>
+              <h4 style={{color:'darkgreen', paddingLeft:'20px'}}> {song.releaseDate} </h4>
               <br></br>
               <br></br>
               <br></br>

@@ -1,25 +1,18 @@
-import React from 'react';
-import App from '../App';
+// import React from "react";
+// import logo from '../Components/rubber soul album pic.jpeg';
 
 
-class Artists extends App {
-  constructor(props) {
-    super(props);
-    this.state = {
-      userInput: "",
-      songs: [{ title: "", artist: "", genre: "", album: "", releaseDate: "" }],
-    };
-  }
+// const Artist = (props) => {
+//   return (
+//     <div>
+//       {props.songs.map((song, index) => (
+//         <div>
+              
+//         </div>
+//       ))}
+//     </div>
+//   );
+ 
+// };
 
-  Artists(props) {
-    this.setState({songs: [artist]})
-  return (
-    <div> 
-    {props.artists}
-    {this.makeGetRequest}
-    </div>
-   );
-  }
-}
-
-export default Artists
+// export default Artists;

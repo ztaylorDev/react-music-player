@@ -1,5 +1,6 @@
 import React from "react";
 import App from "../App";
+import Artists from "./Artists";
 
 const navBar = (props) => {
   return (
@@ -50,7 +51,7 @@ const navBar = (props) => {
                   </a>
                 </li>
                 <li>
-                  <a class="dropdown-item" href="#">
+                  <a class="dropdown-item" href={props.artists}>
                     Artists
                   </a>
                 </li>

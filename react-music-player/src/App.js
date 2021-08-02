@@ -3,6 +3,7 @@ import axios from "axios";
 import Song from "./Components/Song";
 import "./App.css";
 import NavBar from './Components/NavBar';
+// import Artists from "./Components/Artists";
 // import SearchBar from "./Components/SearchBar";
 
 class App extends Component {
@@ -14,27 +15,6 @@ class App extends Component {
       songs: [{ title: "", artist: "", genre: "", album: "", releaseDate: "" }],
     };
   }
-
-  // goToNextSong() {
-  //   let tempSongNumber = this.state.props;
-  //   tempSongNumber++;
-  //   if (tempSongNumber === this.Song.length) {
-  //     tempSongNumber = 0;
-  //   }
-  //   this.setState({
-  //     songNumber: tempSongNumber,
-  //   });
-  // }
-  // goToPreviousSong() {
-  //   let tempSongNumber = this.state.props;
-  //   tempSongNumber--;
-  //   if (tempSongNumber < 0) {
-  //     tempSongNumber = this.Song.length;
-  //   }
-  //   this.setState({
-  //     songNumber: tempSongNumber,
-  //   });
-  // }
 
   componentDidMount() {
     console.log("i mounted");
@@ -58,7 +38,10 @@ class App extends Component {
 
   filterList() {
     const filteredList = this.state.songs.filter(() => {
-      if (this.state.userInput === "The Beatles") {
+      if (this.state.userInput === "artists") {
+        return (true)
+      }
+      if (this.state.userInput === "songs") {
         return(true)
       }
       else {
@@ -72,19 +55,20 @@ class App extends Component {
     this.setState({ userInput: e.target.value });
     console.log(this.state.userInput);
     console.log(this.filterList());
+    console.log(e.target.value);
   }
 
   render() {
     const userInput = this.state.userInput;
     return (
       <div>
-        <NavBar />
-        {/* <fieldset>
+        <NavBar style={{position:'static'}}></NavBar>
+        <fieldset style={{fontFamily:'verdana', paddingLeft:'20px', paddingBottom:'20px'}}>
           <legend>Search by Song:</legend>
           <input value={userInput} onChange={this.handleChange} />
-        </fieldset> */}
-        {/* <SearchBar /> */}
-        <Song songs={this.state.songs}> My Library </Song>
+        </fieldset>
+        <h1 style={{position:'sticky', padding:'30px'}}>My Library:</h1>
+        <Song songs={this.state.songs} />
         {this.makeGetRequest}
       </div>
     );
@@ -92,3 +76,25 @@ class App extends Component {
 }
 
 export default App;
+
+
+  // goToNextSong() {
+  //   let tempSongNumber = this.state.props;
+  //   tempSongNumber++;
+  //   if (tempSongNumber === this.Song.length) {
+  //     tempSongNumber = 0;
+  //   }
+  //   this.setState({
+  //     songNumber: tempSongNumber,
+  //   });
+  // }
+  // goToPreviousSong() {
+  //   let tempSongNumber = this.state.props;
+  //   tempSongNumber--;
+  //   if (tempSongNumber < 0) {
+  //     tempSongNumber = this.Song.length;
+  //   }
+  //   this.setState({
+  //     songNumber: tempSongNumber,
+  //   });
+  // }

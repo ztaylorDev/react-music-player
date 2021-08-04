@@ -6,6 +6,7 @@ import NavBar from './Components/NavBar';
 // import Artists from "./Components/Artists";
 // import SearchBar from "./Components/SearchBar";
 
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -13,6 +14,13 @@ class App extends Component {
     this.state = {
       userInput: "",
       songs: [{ title: "", artist: "", genre: "", album: "", releaseDate: "" }],
+      // testCollection: [
+      //   {id: 1, name: "Picasso"},
+      //   {id: 2, name: "Van Gogh"},
+      //   {id: 3, name: "Pollock"},
+      //   {id: 4, name: "Michaelangelo"},
+      //   {id: 5, name: "Da Vinci"}
+      // ],
     };
   }
 
@@ -25,7 +33,7 @@ class App extends Component {
   async makeGetRequest() {
     try {
       let response = await axios.get(
-        "http://www.devcodecampmusiclibrary.com/api/music/"
+        "http://localhost:9000/api/songs/"
       );
       console.log(response.data);
       this.setState({
@@ -62,7 +70,10 @@ class App extends Component {
     const userInput = this.state.userInput;
     return (
       <div>
-        <NavBar style={{position:'static'}}></NavBar>
+        <NavBar style={{position:'static'}}></NavBar> 
+        {/* <ul> filter method USE THIS!
+          {this.state.testCollection.filter((artist) => artist.name[0] === "P").map((artist) => <li key={artist.id}> {artist.name} </li>)}
+        </ul> */}
         <fieldset style={{fontFamily:'verdana', paddingLeft:'20px', paddingBottom:'20px'}}>
           <legend>Search by Song:</legend>
           <input value={userInput} onChange={this.handleChange} />

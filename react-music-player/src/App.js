@@ -14,13 +14,13 @@ class App extends Component {
     this.state = {
       userInput: "",
       songs: [{ title: "", artist: "", genre: "", album: "", releaseDate: "" }],
-      // testCollection: [
-      //   {id: 1, name: "Picasso"},
-      //   {id: 2, name: "Van Gogh"},
-      //   {id: 3, name: "Pollock"},
-      //   {id: 4, name: "Michaelangelo"},
-      //   {id: 5, name: "Da Vinci"}
-      // ],
+      testCollection: [
+        {id: 1, name: "Picasso"},
+        {id: 2, name: "Van Gogh"},
+        {id: 3, name: "Pollock"},
+        {id: 4, name: "Michaelangelo"},
+        {id: 5, name: "Da Vinci"}
+      ],
     };
   }
 
@@ -33,7 +33,7 @@ class App extends Component {
   async makeGetRequest() {
     try {
       let response = await axios.get(
-        "http://localhost:9000/api/songs/"
+        "http://www.devcodecampmusiclibrary.com/api/music/"
       );
       console.log(response.data);
       this.setState({
@@ -71,13 +71,25 @@ class App extends Component {
     return (
       <div>
         <NavBar style={{position:'static'}}></NavBar> 
-        {/* <ul> filter method USE THIS!
-          {this.state.testCollection.filter((artist) => artist.name[0] === "P").map((artist) => <li key={artist.id}> {artist.name} </li>)}
-        </ul> */}
+      
         <fieldset style={{fontFamily:'verdana', paddingLeft:'20px', paddingBottom:'20px'}}>
           <legend>Search by Song:</legend>
           <input value={userInput} onChange={this.handleChange} />
         </fieldset>
+
+
+        <ul>
+
+          
+          {/* {this.state.songs.filter((song) => song.artist === this.state.userInput).map((song) => <Song song={song} />)} */}
+
+          {this.state.songs.filter((song) => song.artist === this.state.userInput).map((song) => <li key={song.id}> {song.title} </li>)}
+          {this.state.songs.filter((song) => song.title === this.state.userInput).map((song) => <li key={song.id}> {song.title} </li>)}
+          {this.state.songs.filter((song) => song.album === this.state.userInput).map((song) => <li key={song.id}> {song.title} </li>)}
+          {this.state.songs.filter((song) => song.genre === this.state.userInput).map((song) => <li key={song.id}> {song.title} </li>)}
+          {this.state.songs.filter((song) => song.releaseDate === this.state.userInput).map((song) => <li key={song.id}> {song.title} </li>)}
+          
+        </ul>
         <h1 style={{position:'sticky', padding:'30px'}}>My Library:</h1>
         <Song songs={this.state.songs} />
         {this.makeGetRequest}

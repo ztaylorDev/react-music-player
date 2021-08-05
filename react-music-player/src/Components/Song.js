@@ -9,22 +9,22 @@ const Song = (props) => {
         //   Hello, {song.title} from {song.album}!
         // </p>
         <div>
-              <img src={logo} style={{paddingLeft:'20px'}} alt="Logo" />
+              <img src={logo} style={{paddingLeft:'411px'}} alt="Logo" />
               <div style={{paddingBottom:'30px', paddingLeft:'20px'}} />
-              <h2 style={{textAlign:'left', paddingLeft:'20px'}}>Song:</h2>
-              <h4 style={{color:'darkgreen', paddingLeft:'20px'}}> {song.title} </h4>
+              <h2 style={{textAlign:'center', paddingLeft:'20px'}}>Song:</h2>
+              <h4 style={{textAlign: 'center',color:'darkgreen', paddingLeft:'20px'}}> {song.title} </h4>
               <br></br>
-              <h2 style={{textAlign:'left', paddingLeft:'20px'}}>Artist:</h2>
-              <h4 style={{color:'darkgreen', paddingLeft:'20px'}}> {song.artist} </h4>
+              <h2 style={{textAlign:'center', paddingLeft:'20px'}}>Artist:</h2>
+              <h4 style={{textAlign: 'center',color:'darkgreen', paddingLeft:'20px'}}> {song.artist} </h4>
               <br></br>
-              <h2 style={{textAlign:'left', paddingLeft:'20px'}}>Album:</h2>
-              <h4 style={{color:'darkgreen', paddingLeft:'20px'}}> {song.album} </h4>
+              <h2 style={{textAlign:'center', paddingLeft:'20px'}}>Album:</h2>
+              <h4 style={{textAlign: 'center',color:'darkgreen', paddingLeft:'20px'}}> {song.album} </h4>
               <br></br>
-              <h2 style={{textAlign:'left', paddingLeft:'20px'}}>Genre:</h2>
-              <h4 style={{color:'darkgreen', paddingLeft:'20px'}}> {song.genre} </h4>
+              <h2 style={{textAlign:'center', paddingLeft:'20px'}}>Genre:</h2>
+              <h4 style={{textAlign: 'center',color:'darkgreen', paddingLeft:'20px'}}> {song.genre} </h4>
               <br></br>
-              <h2 style={{textAlign:'left', paddingLeft:'20px'}}>Release Date:</h2>
-              <h4 style={{color:'darkgreen', paddingLeft:'20px'}}> {song.releaseDate} </h4>
+              <h2 style={{textAlign:'center', paddingLeft:'20px'}}>Release Date:</h2>
+              <h4 style={{textAlign: 'center',color:'darkgreen', paddingLeft:'20px'}}> {song.releaseDate} </h4>
               <br></br>
               <br></br>
               <br></br>

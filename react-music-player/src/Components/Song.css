@@ -1,9 +1,14 @@
-h2{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-style: oblique;
-};
+h2 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-style: oblique;
+}
 
-h3{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: blueviolet;
-};
+h3 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: blueviolet;
+}
+
+img {
+  /* align-content: center; */
+  text-align: center;
+}

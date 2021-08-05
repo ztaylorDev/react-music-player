@@ -73,7 +73,7 @@ class App extends Component {
         <NavBar style={{position:'static'}}></NavBar> 
       
         <fieldset style={{fontFamily:'verdana', paddingLeft:'20px', paddingBottom:'20px'}}>
-          <legend>Search by Song:</legend>
+          <legend className = 'searchHeader'>Search by Song:</legend>
           <input value={userInput} onChange={this.handleChange} />
         </fieldset>
 

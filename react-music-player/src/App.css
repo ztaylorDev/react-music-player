@@ -10,6 +10,13 @@ p{
 }
 
 
+.searchHeader{
+    background-color: rgba(199, 82, 5, 0.932);
+    color: white;
+
+}
+
+
 .nextbutton{
     color: red;
 }
